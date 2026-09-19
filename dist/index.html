@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#070c14" />
+    <meta
+      name="description"
+      content="Request deletion of your Live Moment: Weather Wallpaper account and associated app data."
+    />
+    <title>Delete your account · Live Moment</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23070c14'/%3E%3Cpath d='M14 41c9-1 11-13 19-17 6-3 11 0 17-6-2 12-7 24-20 27-7 2-12 0-16-4Z' fill='%23c0deff'/%3E%3Cpath d='M18 43c9-8 17-10 29-21' stroke='%23203752' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="config.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#request-form">Skip to deletion request</a>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Live Moment home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 48 48" role="img">
+            <path d="M8 31c7-1 8-10 15-13 5-3 9 0 17-5-2 10-6 19-17 22-6 2-11 0-15-4Z" />
+            <path class="brand-vein" d="M11 34c7-7 14-10 26-18" />
+          </svg>
+        </span>
+        <span>Live Moment</span>
+      </a>
+      <div class="language-switch" role="group" aria-label="Language">
+        <button class="language-button is-active" type="button" data-language="en" aria-pressed="true">EN</button>
+        <button class="language-button" type="button" data-language="tr" aria-pressed="false">TR</button>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n="eyebrow">ACCOUNT &amp; DATA</p>
+          <h1 id="page-title" data-i18n="title">Delete your Live Moment account</h1>
+          <p class="hero-intro" data-i18n="intro">
+            Request permanent deletion of your <strong>Live Moment: Weather Wallpaper</strong>
+            account and associated app data.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#request-form" data-i18n="requestCta">Request deletion</a>
+            <a class="button button-secondary" href="#in-app" data-i18n="inAppCta">Delete in the app</a>
+          </div>
+        </div>
+
+        <aside class="privacy-note" aria-label="Privacy note">
+          <span class="privacy-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 3 5 6v5c0 4.7 2.9 8.4 7 10 4.1-1.6 7-5.3 7-10V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></svg>
+          </span>
+          <div>
+            <strong data-i18n="privacyTitle">Your account ID is not a password</strong>
+            <p data-i18n="privacyText">
+              We verify account ownership before deletion. Knowing an account ID alone never authorizes a deletion.
+            </p>
+          </div>
+        </aside>
+      </section>
+
+      <section class="request-layout" aria-labelledby="request-title">
+        <div class="section-heading">
+          <p class="step-number" aria-hidden="true">01</p>
+          <div>
+            <h2 id="request-title" data-i18n="requestTitle">Request account deletion</h2>
+            <p data-i18n="requestLead">
+              Use the email address connected to your Live Moment account. Your email app will open with a prepared request; review it, then send it.
+            </p>
+          </div>
+        </div>
+
+        <form id="request-form" class="request-card" novalidate>
+          <div class="field">
+            <label for="account-email" data-i18n="emailLabel">Account email</label>
+            <input
+              id="account-email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              inputmode="email"
+              placeholder="you@example.com"
+              required
+              aria-describedby="email-help"
+            />
+            <p id="email-help" class="field-help" data-i18n="emailHelp">
+              Enter the email used with Google sign-in or email-link sign-in.
+            </p>
+          </div>
+
+          <div class="field">
+            <label for="account-id">
+              <span data-i18n="idLabel">Account ID</span>
+              <span class="optional" data-i18n="optional">Optional</span>
+            </label>
+            <input
+              id="account-id"
+              name="accountId"
+              type="text"
+              autocomplete="off"
+              maxlength="128"
+              placeholder="Firebase UID"
+              aria-describedby="id-help"
+            />
+            <p id="id-help" class="field-help" data-i18n="idHelp">
+              This helps us locate your account, but it is not used as proof of ownership.
+            </p>
+          </div>
+
+          <label class="confirm-row" for="confirm-delete">
+            <input id="confirm-delete" name="confirm" type="checkbox" required />
+            <span>
+              <strong data-i18n="confirmTitle">I want to permanently delete my account.</strong>
+              <small data-i18n="confirmText">I understand that this action cannot be undone.</small>
+            </span>
+          </label>
+
+          <div id="form-message" class="form-message" role="alert" aria-live="polite"></div>
+
+          <button class="button button-danger" type="submit">
+            <span data-i18n="submitCta">Prepare deletion request</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+          </button>
+
+          <p class="form-footnote" data-i18n="formFootnote">
+            This page does not transmit your details. They are added to a new message in your email app and are sent only when you choose Send.
+          </p>
+        </form>
+      </section>
+
+      <section class="data-section" aria-labelledby="data-title">
+        <div class="section-heading">
+          <p class="step-number" aria-hidden="true">02</p>
+          <div>
+            <h2 id="data-title" data-i18n="dataTitle">Data deletion details</h2>
+            <p data-i18n="dataLead">Here is what the request covers and what may remain outside Live Moment.</p>
+          </div>
+        </div>
+
+        <div class="data-grid">
+          <article class="data-card data-card-delete">
+            <div class="data-card-heading">
+              <span class="data-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="m7 7 10 10M17 7 7 17"/></svg>
+              </span>
+              <h3 data-i18n="deletedTitle">Deleted</h3>
+            </div>
+            <ul>
+              <li data-i18n="deletedOne">Your Live Moment account and profile</li>
+              <li data-i18n="deletedTwo">Uploaded photos, generated images and videos stored by Live Moment</li>
+              <li data-i18n="deletedThree">Generation history and other app records linked to your account</li>
+            </ul>
+          </article>
+
+          <article class="data-card data-card-retain">
+            <div class="data-card-heading">
+              <span class="data-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 8v5l3 2"/><circle cx="12" cy="12" r="9"/></svg>
+              </span>
+              <h3 data-i18n="retainedTitle">Not deleted or retained separately</h3>
+            </div>
+            <ul>
+              <li data-i18n="retainedOne">Copies you exported to your device, backups or other services</li>
+              <li data-i18n="retainedTwo">Your Google account and Google Play subscription</li>
+              <li data-i18n="retainedThree">Limited provider copies, security logs or backups kept under applicable retention requirements</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="subscription-callout">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 8v4M12 16h.01"/><circle cx="12" cy="12" r="9"/></svg>
+          <p>
+            <strong data-i18n="subscriptionTitle">Deleting your account does not cancel a Google Play subscription.</strong>
+            <span data-i18n="subscriptionText">Cancel any active subscription separately in Google Play before or after sending your request.</span>
+          </p>
+        </div>
+      </section>
+
+      <section id="in-app" class="in-app-section" aria-labelledby="in-app-title">
+        <div>
+          <p class="eyebrow" data-i18n="inAppEyebrow">ALREADY HAVE THE APP?</p>
+          <h2 id="in-app-title" data-i18n="inAppTitle">Delete directly in Live Moment</h2>
+          <p data-i18n="inAppText">
+            The in-app flow securely re-verifies your identity and completes deletion immediately when there is no active generation or upload link.
+          </p>
+        </div>
+        <div class="path" aria-label="Profile, Account, Delete Account">
+          <span data-i18n="pathProfile">Profile</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg>
+          <span data-i18n="pathAccount">Account</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg>
+          <span class="path-danger" data-i18n="pathDelete">Delete Account</span>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <p>© <span id="year"></span> Live Moment: Weather Wallpaper</p>
+      <p data-i18n="footerText">Account deletion &amp; data request</p>
+    </footer>
+  </body>
+</html>
