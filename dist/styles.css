@@ -156,7 +156,8 @@ footer {
   display: grid;
   grid-template-columns: minmax(0, 1.55fr) minmax(280px, 0.75fr);
   gap: 56px;
-  align-items: end;
+  align-content: center;
+  align-items: center;
   min-height: calc(100svh - 88px);
   padding: 72px 0 92px;
   border-bottom: 1px solid var(--border);
