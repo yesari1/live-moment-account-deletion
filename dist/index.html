@@ -48,8 +48,7 @@
             account and associated app data.
           </p>
           <div class="hero-actions">
-            <a class="button button-primary" href="#request-form" data-i18n="requestCta">Request deletion</a>
-            <a class="button button-secondary" href="#in-app" data-i18n="inAppCta">Delete in the app</a>
+            <a class="button button-primary" href="#request-section" data-i18n="requestCta">Request deletion</a>
           </div>
         </div>
 
@@ -66,7 +65,7 @@
         </aside>
       </section>
 
-      <section class="request-layout" aria-labelledby="request-title">
+      <section id="request-section" class="request-layout" aria-labelledby="request-title">
         <div class="section-heading">
           <p class="step-number" aria-hidden="true">01</p>
           <div>
@@ -106,7 +105,7 @@
               type="text"
               autocomplete="off"
               maxlength="128"
-              placeholder="Firebase UID"
+              placeholder="UID"
               aria-describedby="id-help"
             />
             <p id="id-help" class="field-help" data-i18n="idHelp">
@@ -144,33 +143,25 @@
           </div>
         </div>
 
-        <div class="data-grid">
-          <article class="data-card data-card-delete">
+        <div class="data-list">
+          <article class="data-row data-row-delete">
             <div class="data-card-heading">
               <span class="data-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24"><path d="m7 7 10 10M17 7 7 17"/></svg>
               </span>
               <h3 data-i18n="deletedTitle">Deleted</h3>
             </div>
-            <ul>
-              <li data-i18n="deletedOne">Your Live Moment account and profile</li>
-              <li data-i18n="deletedTwo">Uploaded photos, generated images and videos stored by Live Moment</li>
-              <li data-i18n="deletedThree">Generation history and other app records linked to your account</li>
-            </ul>
+            <p data-i18n="deletedSummary">Your Live Moment account, profile, uploaded media and generation history.</p>
           </article>
 
-          <article class="data-card data-card-retain">
+          <article class="data-row data-row-retain">
             <div class="data-card-heading">
               <span class="data-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24"><path d="M12 8v5l3 2"/><circle cx="12" cy="12" r="9"/></svg>
               </span>
-              <h3 data-i18n="retainedTitle">Not deleted or retained separately</h3>
+              <h3 data-i18n="retainedTitle">May remain</h3>
             </div>
-            <ul>
-              <li data-i18n="retainedOne">Copies you exported to your device, backups or other services</li>
-              <li data-i18n="retainedTwo">Your Google account and Google Play subscription</li>
-              <li data-i18n="retainedThree">Limited provider copies, security logs or backups kept under applicable retention requirements</li>
-            </ul>
+            <p data-i18n="retainedSummary">Exported copies, your Google account, and limited records required for security or provider retention.</p>
           </article>
         </div>
 
@@ -180,23 +171,6 @@
             <strong data-i18n="subscriptionTitle">Deleting your account does not cancel a Google Play subscription.</strong>
             <span data-i18n="subscriptionText">Cancel any active subscription separately in Google Play before or after sending your request.</span>
           </p>
-        </div>
-      </section>
-
-      <section id="in-app" class="in-app-section" aria-labelledby="in-app-title">
-        <div>
-          <p class="eyebrow" data-i18n="inAppEyebrow">ALREADY HAVE THE APP?</p>
-          <h2 id="in-app-title" data-i18n="inAppTitle">Delete directly in Live Moment</h2>
-          <p data-i18n="inAppText">
-            The in-app flow securely re-verifies your identity and completes deletion immediately when there is no active generation or upload link.
-          </p>
-        </div>
-        <div class="path" aria-label="Profile, Account, Delete Account">
-          <span data-i18n="pathProfile">Profile</span>
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg>
-          <span data-i18n="pathAccount">Account</span>
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg>
-          <span class="path-danger" data-i18n="pathDelete">Delete Account</span>
         </div>
       </section>
 

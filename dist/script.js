@@ -7,7 +7,6 @@
       title: "Live Moment hesabınızı silin",
       intro: "Live Moment: Weather Wallpaper hesabınızın ve ilişkili uygulama verilerinin kalıcı olarak silinmesini talep edin.",
       requestCta: "Silme talebi gönder",
-      inAppCta: "Uygulamada sil",
       privacyTitle: "Hesap ID’niz bir parola değildir",
       privacyText: "Silme işleminden önce hesap sahipliğini doğrularız. Yalnızca hesap ID’sini bilmek silme yetkisi vermez.",
       requestTitle: "Hesap silme talebi oluşturun",
@@ -24,21 +23,11 @@
       dataTitle: "Veri silme ayrıntıları",
       dataLead: "Talebin hangi verileri kapsadığını ve Live Moment dışında nelerin kalabileceğini görün.",
       deletedTitle: "Silinenler",
-      deletedOne: "Live Moment hesabınız ve profiliniz",
-      deletedTwo: "Live Moment tarafından saklanan yüklenmiş fotoğraflar, oluşturulan görseller ve videolar",
-      deletedThree: "Hesabınıza bağlı üretim geçmişi ve diğer uygulama kayıtları",
-      retainedTitle: "Silinmeyen veya ayrı saklananlar",
-      retainedOne: "Cihazınıza, yedeklere veya başka hizmetlere aktardığınız kopyalar",
-      retainedTwo: "Google hesabınız ve Google Play aboneliğiniz",
-      retainedThree: "Geçerli saklama gereklilikleri kapsamında tutulan sınırlı sağlayıcı kopyaları, güvenlik günlükleri veya yedekler",
+      deletedSummary: "Live Moment hesabınız, profiliniz, yüklenen medyalarınız ve üretim geçmişiniz.",
+      retainedTitle: "Kalabilecek veriler",
+      retainedSummary: "Dışa aktarılan kopyalar, Google hesabınız ve güvenlik ya da sağlayıcı saklama şartları için gerekli sınırlı kayıtlar.",
       subscriptionTitle: "Hesabınızı silmek Google Play aboneliğinizi iptal etmez.",
       subscriptionText: "Etkin aboneliğinizi talep göndermeden önce veya sonra Google Play üzerinden ayrıca iptal edin.",
-      inAppEyebrow: "UYGULAMA HÂLÂ YÜKLÜ MÜ?",
-      inAppTitle: "Doğrudan Live Moment içinde silin",
-      inAppText: "Uygulama içi akış kimliğinizi güvenli biçimde yeniden doğrular; devam eden üretim veya yükleme bağlantısı yoksa silmeyi hemen tamamlar.",
-      pathProfile: "Profil",
-      pathAccount: "Hesap",
-      pathDelete: "Hesabı Sil",
       footerText: "Hesap silme ve veri talebi",
       invalidEmail: "Geçerli bir e-posta adresi girin.",
       confirmRequired: "Devam etmek için kalıcı silme onay kutusunu işaretleyin.",
@@ -92,25 +81,16 @@
       button.setAttribute("aria-pressed", String(active));
     });
 
-    try {
-      localStorage.setItem("live-moment-deletion-language", language);
-    } catch (_) {
-      // Language persistence is optional.
-    }
   }
 
   document.querySelectorAll("[data-language]").forEach((button) => {
     button.addEventListener("click", () => setLanguage(button.dataset.language));
   });
 
-  let savedLanguage = null;
-  try {
-    savedLanguage = localStorage.getItem("live-moment-deletion-language");
-  } catch (_) {
-    // Use browser language when storage is unavailable.
-  }
-  const browserLanguage = navigator.language && navigator.language.toLowerCase().startsWith("tr") ? "tr" : "en";
-  setLanguage(savedLanguage || browserLanguage);
+  // English is the stable default for the public Google Play resource.
+  // Visitors can switch to Turkish for the current page without changing
+  // the default on their next visit.
+  setLanguage("en");
 
   const form = document.getElementById("request-form");
   const emailInput = document.getElementById("account-email");
