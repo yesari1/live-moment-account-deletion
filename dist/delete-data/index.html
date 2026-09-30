@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#070c14">
+<meta name="description" content="How to delete some or all of your data in Live Moment: Weather Wallpaper without deleting your account: delete a creation in the app or send an email request. What is deleted, what is kept and for how long.">
+<title>Delete your data · Live Moment</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23070c14'/%3E%3Cpath d='M14 41c9-1 11-13 19-17 6-3 11 0 17-6-2 12-7 24-20 27-7 2-12 0-16-4Z' fill='%23c0deff'/%3E%3Cpath d='M18 43c9-8 17-10 29-21' stroke='%23203752' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../legal.css">
+<link rel="stylesheet" href="../self-service/self-service.css">
+<script src="../self-service/config.js"></script>
+<script type="module" src="../self-service/page.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#main"><span data-lang="en">Skip to content</span><span data-lang="tr" hidden>İçeriğe geç</span></a>
+
+<header class="site-header">
+  <a class="brand" href="https://account.yesastudio.com/" aria-label="Live Moment home">
+    <span class="brand-mark" aria-hidden="true">
+      <svg viewBox="0 0 48 48" role="img">
+        <path d="M8 31c7-1 8-10 15-13 5-3 9 0 17-5-2 10-6 19-17 22-6 2-11 0-15-4Z" />
+        <path class="brand-vein" d="M11 34c7-7 14-10 26-18" />
+      </svg>
+    </span>
+    <span>Live Moment</span>
+  </a>
+  <div class="language-switch" role="group" aria-label="Language">
+    <button class="language-button is-active" type="button" data-language="en" aria-pressed="true">EN</button>
+    <button class="language-button" type="button" data-language="tr" aria-pressed="false">TR</button>
+  </div>
+</header>
+
+<nav class="site-nav" aria-label="Site pages">
+    <a href="../privacy/">Privacy</a>
+    <a href="../terms/">Terms</a>
+    <a href="../acceptable-use/">Acceptable use</a>
+    <a href="../kvkk/" lang="tr">KVKK</a>
+    <a href="../delete-data/" aria-current="page">Delete data</a>
+    <a href="https://account.yesastudio.com/">Delete account</a>
+</nav>
+
+<main id="main">
+<article class="legal legal-wide">
+
+<div lang="en" data-lang="en">
+
+<h1>Delete your Live Moment data</h1>
+<p class="meta">Live Moment: Weather Wallpaper &middot; Developer: Yunus Emre Sar&#305; &middot; Last updated: 30 September 2026</p>
+
+</div>
+
+<div lang="tr" data-lang="tr" hidden>
+
+<h1>Live Moment verilerinizi silin</h1>
+<p class="meta">Live Moment: Weather Wallpaper &middot; Geliştirici: Yunus Emre Sarı &middot; Son güncelleme: 30 Eylül 2026</p>
+
+</div>
+
+<div class="ss">
+  <p id="ss-checking" class="ss-loading" data-str="checking" hidden></p>
+  <div id="ss-signed-out" class="ss-card" hidden>
+    <h2 class="ss-title" data-str="libSignInTitle"></h2>
+    <p class="ss-text" data-str="libSignInText"></p>
+    <button id="ss-sign-in" type="button" class="button button-primary ss-google">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.4 30.3 0 24 0 14.6 0 6.5 5.4 2.6 13.2l7.9 6.1C12.4 13.6 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.7c-.6 3-2.3 5.5-4.8 7.2l7.5 5.8c4.4-4.1 7.1-10.1 7.1-17.5z"/><path fill="#FBBC05" d="M10.5 28.7c-.5-1.5-.8-3-.8-4.7s.3-3.2.8-4.7l-7.9-6.1C.9 16.4 0 20.1 0 24s.9 7.6 2.6 10.8l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.5-5.8c-2.1 1.4-4.9 2.3-8.4 2.3-6.3 0-11.6-4.1-13.5-9.8l-7.9 6.1C6.5 42.6 14.6 48 24 48z"/></svg>
+      <span data-str="signInButton"></span>
+    </button>
+    <p id="ss-sign-in-message" class="ss-status" role="status" aria-live="polite"></p>
+    <p class="ss-hint" data-str="signInNote"></p>
+  </div>
+  <div id="ss-signed-in" hidden>
+    <div class="ss-account-bar">
+      <p><span data-str="signedInAs"></span> <strong id="ss-email"></strong></p>
+      <button id="ss-sign-out" type="button" class="ss-button" data-str="signOut"></button>
+    </div>
+    <h2 class="ss-title" data-str="libraryTitle"></h2>
+    <p id="ss-status" class="ss-status" role="status" aria-live="polite"></p>
+    <p id="ss-loading" class="ss-loading" data-str="loading" hidden></p>
+    <div id="ss-load-error" class="ss-retry" hidden>
+      <button id="ss-retry" type="button" class="ss-button" data-str="retry"></button>
+    </div>
+    <ul id="ss-list" class="ss-list"></ul>
+    <p id="ss-empty" class="ss-empty" data-str="empty" hidden></p>
+    <p class="ss-note" data-str="listNote"></p>
+  </div>
+</div>
+
+<div lang="en" data-lang="en">
+
+<p>You can delete some or all of your data in <strong>Live Moment: Weather Wallpaper</strong> and keep your account. To delete the whole account instead, use the <a href="https://account.yesastudio.com/">account deletion page</a>.</p>
+
+<div class="callout">
+  <h2 id="step-1">Step 1. In the app: delete a creation</h2>
+  <ol>
+    <li>Open Live Moment and tap <strong>Library</strong> in the bottom bar.</li>
+    <li>Under <strong>My Wallpapers</strong>, tap the finished wallpaper you want to remove.</li>
+    <li>Tap <strong>Delete Wallpaper</strong>, then confirm with <strong>Delete</strong>.</li>
+  </ol>
+  <p>This removes the wallpaper's images and video from your phone and, right after, its copy in your cloud library. Keep your phone online for a moment so the cloud copy can be removed. If it was offline, or if the item is a look in your Weather Set (Live Weather or Live Weather Plus), which the app cannot delete one by one, use step 2.</p>
+</div>
+
+<div class="callout">
+  <h2 id="step-2">Step 2. Anything else: ask us by email</h2>
+  <ol>
+    <li>Write to <a href="mailto:1yesari1@gmail.com?subject=Live%20Moment%20data%20deletion%20request&amp;body=Hello%2C%0D%0A%0D%0APlease%20delete%20the%20following%20data%20from%20my%20Live%20Moment%3A%20Weather%20Wallpaper%20account.%20I%20am%20not%20asking%20to%20delete%20the%20account%20itself.%0D%0A%0D%0AData%20to%20delete%3A%0D%0A-%20%0D%0A%0D%0AI%20am%20writing%20from%20the%20email%20address%20of%20my%20account.">1yesari1@gmail.com</a> from the email address of your account.</li>
+    <li>Use the subject <strong>Live Moment data deletion request</strong>.</li>
+    <li>Say which data we should delete, for example your uploaded photos, your generation history or your reports.</li>
+  </ol>
+  <p>We reply to that address to check that it is you. We never ask for a password or payment details. Then we delete the copies we hold (in our database, cloud storage and cloud library) within 30 days of your request. For copies held by our AI processing provider, we forward your request to the provider, which deletes them under its own retention terms. We cannot set or shorten those terms, so we cannot give you a date for them.</p>
+</div>
+
+<h2 id="which-data">Which data you can delete, and how</h2>
+<div class="table-wrap">
+<table>
+  <thead><tr><th>Data</th><th>How</th></tr></thead>
+  <tbody>
+    <tr><td data-label="Data">Your creations in the cloud library: source photo, images and videos</td><td data-label="How">Step 1 for wallpapers under My Wallpapers. Step 2 for looks in your Weather Set.</td></tr>
+    <tr><td data-label="Data">Photos you uploaded that we still hold for a job, and generated files that are not yet deleted automatically</td><td data-label="How">Step 2. We delete these automatically anyway, normally within one to two days.</td></tr>
+    <tr><td data-label="Data">Your free preview image</td><td data-label="How">Step 2.</td></tr>
+    <tr><td data-label="Data">Generation history: job records with status, style, model and timing</td><td data-label="How">Step 2. Records that prove a paid single wallpaper's regeneration allowance can stay up to a year.</td></tr>
+    <tr><td data-label="Data">Feedback messages and reports you sent</td><td data-label="How">Step 2. A report may be kept longer only if the law requires us to keep a record.</td></tr>
+    <tr><td data-label="Data">The record that you confirmed the photo-upload notice</td><td data-label="How">Step 2. The app may ask you to confirm the notice again before your next upload.</td></tr>
+    <tr><td data-label="Data">Approximate weather location</td><td data-label="How">It is stored only on your phone, rounded to about 11 km, and never sent to our servers, so we hold nothing to delete. To remove it, clear the app's storage in Android Settings (Apps, Live Moment, Storage, Clear data; this also signs you out) or uninstall the app.</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h2 id="kept">What we keep, and for how long</h2>
+<p>These periods apply even after a data deletion request.</p>
+<div class="table-wrap">
+<table>
+  <thead><tr><th>Data</th><th>How long</th></tr></thead>
+  <tbody>
+    <tr><td data-label="Data">Purchase records (product, dates, purchase token, account ID)</td><td data-label="How long">As long as accounting, tax, fraud-prevention and legal-claim rules require. We keep them even if you delete your account.</td></tr>
+    <tr><td data-label="Data">Technical usage records per generation (model, timing, estimated cost)</td><td data-label="How long">Up to a year.</td></tr>
+    <tr><td data-label="Data">Server and security logs</td><td data-label="How long">Up to about 30 days.</td></tr>
+    <tr><td data-label="Data">Files we delete from our cloud storage</td><td data-label="How long">Kept in a protected, recoverable state for up to 7 more days, then permanently erased. Google may take longer to clear residual copies from its own backup systems.</td></tr>
+    <tr><td data-label="Data">Copies at our AI processing provider (Pixazo and the model developers behind it)</td><td data-label="How long">We forward your deletion request to the provider. It deletes them under its own retention terms. We cannot set or shorten those terms, so the 30 days above do not apply to them.</td></tr>
+    <tr><td data-label="Data">Files you exported or shared (Gallery, Downloads, sent to other people)</td><td data-label="How long">Not in our control. Delete them on your phone, or ask the people you sent them to.</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h2 id="more">More</h2>
+<ul>
+  <li><a href="https://account.yesastudio.com/">Delete your whole account</a>, including your sign-in and plan records.</li>
+  <li><a href="../privacy/">Privacy Policy</a>, with <a href="../privacy/#retention">how long we keep data</a> and <a href="../privacy/#rights">your rights</a>.</li>
+  <li><a href="../terms/">Terms of Use</a>.</li>
+</ul>
+<p>Did someone else upload a photo of you or your child? Email us at the same address and we will delete what we hold.</p>
+<p>Live Moment: Weather Wallpaper is offered by Yunus Emre Sar&#305;, Sancaktepe/&#304;stanbul, T&uuml;rkiye. Email: <a href="mailto:1yesari1@gmail.com">1yesari1@gmail.com</a>. The same contact details are in section 14 of the <a href="../privacy/#contact">Privacy Policy</a>.</p>
+
+</div>
+
+<div lang="tr" data-lang="tr" hidden>
+
+<p><strong>Live Moment: Weather Wallpaper</strong> uygulamasındaki verilerinizin bir kısmını ya da tamamını hesabınızı silmeden silebilirsiniz. Hesabın tamamını silmek isterseniz <a href="https://account.yesastudio.com/">hesap silme sayfasını</a> kullanın.</p>
+
+<div class="callout">
+  <h2 id="adim-1">1. Adım. Uygulamada: bir duvar kâğıdını silin</h2>
+  <ol>
+    <li>Live Moment'ı açın ve alt çubukta <strong>Library</strong> sekmesine dokunun.</li>
+    <li><strong>My Wallpapers</strong> altında silmek istediğiniz hazır duvar kâğıdına dokunun.</li>
+    <li><strong>Delete Wallpaper</strong>'a dokunun, sonra <strong>Delete</strong> ile onaylayın.</li>
+  </ol>
+  <p>Bu işlem duvar kâğıdının görsellerini ve videosunu telefonunuzdan, hemen ardından da bulut kütüphanenizdeki kopyasını siler. Bulut kopyasının silinebilmesi için telefonunuzu bir süre çevrimiçi tutun. Telefon çevrimdışıysa ya da öğe Weather Set'inizdeki (Live Weather veya Live Weather Plus) bir görünümse 2. adımı kullanın; uygulama bu görünümleri tek tek silemez.</p>
+</div>
+
+<div class="callout">
+  <h2 id="adim-2">2. Adım. Diğer her şey için: bize e-posta gönderin</h2>
+  <ol>
+    <li>Hesabınızın e-posta adresinden <a href="mailto:1yesari1@gmail.com?subject=Live%20Moment%20data%20deletion%20request&amp;body=Merhaba%2C%0D%0A%0D%0ALive%20Moment%3A%20Weather%20Wallpaper%20hesab%C4%B1mdaki%20a%C5%9Fa%C4%9F%C4%B1daki%20verilerin%20silinmesini%20istiyorum.%20Hesab%C4%B1n%20kendisinin%20silinmesini%20istemiyorum.%0D%0A%0D%0ASilinecek%20veriler%3A%0D%0A-%20%0D%0A%0D%0AHesab%C4%B1m%C4%B1n%20e-posta%20adresinden%20yaz%C4%B1yorum.">1yesari1@gmail.com</a> adresine yazın.</li>
+    <li>Konu olarak <strong>Live Moment data deletion request</strong> yazın.</li>
+    <li>Hangi verileri silmemiz gerektiğini belirtin; örneğin yüklediğiniz fotoğraflar, üretim geçmişiniz ya da bildirimleriniz.</li>
+  </ol>
+  <p>Sizin olduğunuzu doğrulamak için o adrese yanıt veririz. Parola ya da ödeme bilgisi asla istemeyiz. Ardından elimizdeki kopyaları (veritabanımızdaki, bulut depolamamızdaki ve bulut kütüphanemizdeki) talebinizden itibaren 30 gün içinde sileriz. Yapay zekâ işleme sağlayıcımızın elindeki kopyalar için talebinizi sağlayıcıya iletiriz; sağlayıcı bunları kendi saklama koşullarına göre siler. Bu koşulları biz belirleyemez ya da kısaltamayız, bu yüzden onlar için tarih veremeyiz.</p>
+</div>
+
+<h2 id="hangi-veriler">Hangi verileri silebilirsiniz ve nasıl</h2>
+<div class="table-wrap">
+<table>
+  <thead><tr><th>Veri</th><th>Nasıl</th></tr></thead>
+  <tbody>
+    <tr><td data-label="Veri">Bulut kütüphanenizdeki kopyalar: kaynak fotoğraf, görseller ve videolar</td><td data-label="Nasıl">My Wallpapers altındaki duvar kâğıtları için 1. adım. Weather Set'inizdeki görünümler için 2. adım.</td></tr>
+    <tr><td data-label="Veri">Bir iş için hâlâ elimizde bulunan yüklediğiniz fotoğraflar ve henüz otomatik silinmemiş üretilmiş dosyalar</td><td data-label="Nasıl">2. adım. Bunları zaten otomatik olarak, normalde bir ila iki gün içinde sileriz.</td></tr>
+    <tr><td data-label="Veri">Ücretsiz önizleme görseliniz</td><td data-label="Nasıl">2. adım.</td></tr>
+    <tr><td data-label="Veri">Üretim geçmişi: durum, stil, model ve süre içeren iş kayıtları</td><td data-label="Nasıl">2. adım. Ücretli tekli duvar kâğıdının yeniden üretim hakkını kanıtlayan kayıtlar bir yıla kadar kalabilir.</td></tr>
+    <tr><td data-label="Veri">Gönderdiğiniz geri bildirim mesajları ve bildirimler</td><td data-label="Nasıl">2. adım. Hukuki bir kayıt tutma zorunluluğu varsa yalnızca o durumda bir bildirim daha uzun saklanabilir.</td></tr>
+    <tr><td data-label="Veri">Fotoğraf yükleme bildirimini onayladığınıza dair kayıt</td><td data-label="Nasıl">2. adım. Uygulama bir sonraki yüklemeden önce bildirimi yeniden onaylamanızı isteyebilir.</td></tr>
+    <tr><td data-label="Veri">Yaklaşık hava durumu konumu</td><td data-label="Nasıl">Yalnızca telefonunuzda, yaklaşık 11 km'ye yuvarlanmış olarak saklanır ve sunucularımıza hiç gönderilmez; bu yüzden silinecek bir şey tutmuyoruz. Silmek için Android Ayarlar'da uygulamanın depolama alanını temizleyin (Uygulamalar, Live Moment, Depolama, Verileri temizle; bu oturumunuzu da kapatır) ya da uygulamayı kaldırın.</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h2 id="saklanan">Neleri saklarız ve ne kadar süre</h2>
+<p>Bu süreler, veri silme talebinden sonra da geçerlidir.</p>
+<div class="table-wrap">
+<table>
+  <thead><tr><th>Veri</th><th>Saklama süresi</th></tr></thead>
+  <tbody>
+    <tr><td data-label="Veri">Satın alma kayıtları (ürün, tarihler, satın alma belirteci, hesap kimliği)</td><td data-label="Saklama süresi">Muhasebe, vergi, sahteciliği önleme ve hukuki taleplere ilişkin mevzuatın gerektirdiği süre boyunca. Hesabınızı silseniz bile saklarız.</td></tr>
+    <tr><td data-label="Veri">Üretim başına teknik kullanım kayıtları (model, süre, tahmini maliyet)</td><td data-label="Saklama süresi">En çok bir yıl.</td></tr>
+    <tr><td data-label="Veri">Sunucu ve güvenlik kayıtları</td><td data-label="Saklama süresi">En çok yaklaşık 30 gün.</td></tr>
+    <tr><td data-label="Veri">Bulut depolamamızdan sildiğimiz dosyalar</td><td data-label="Saklama süresi">7 güne kadar korumalı ve geri getirilebilir durumda bekler, sonra kalıcı olarak silinir. Google, kendi yedek sistemlerindeki artık kopyaları koşullarına göre daha geç temizleyebilir.</td></tr>
+    <tr><td data-label="Veri">Yapay zekâ işleme sağlayıcımızdaki kopyalar (Pixazo ve arkasındaki model geliştiriciler)</td><td data-label="Saklama süresi">Silme talebinizi sağlayıcıya iletiriz. Sağlayıcı bunları kendi saklama koşullarına göre siler. Bu koşulları biz belirleyemez ya da kısaltamayız; bu yüzden yukarıdaki 30 gün onlar için geçerli değildir.</td></tr>
+    <tr><td data-label="Veri">Dışa aktardığınız ya da paylaştığınız dosyalar (Galeri, İndirilenler, başkalarına gönderilenler)</td><td data-label="Saklama süresi">Bizim denetimimizde değil. Telefonunuzdan silin ya da gönderdiğiniz kişilerden silmelerini isteyin.</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h2 id="diger">Diğer bilgiler</h2>
+<ul>
+  <li><a href="https://account.yesastudio.com/">Hesabınızın tamamını silin</a>, giriş ve plan kayıtlarınız dâhil.</li>
+  <li><a href="../kvkk/">KVKK Aydınlatma Metni</a> ve İngilizce <a href="../privacy/" lang="en">Privacy Policy</a> (<a href="../privacy/#retention" lang="en">how long we keep data</a>).</li>
+  <li><a href="../terms/" lang="en">Terms of Use</a> (İngilizce).</li>
+</ul>
+<p>Fotoğrafınızı ya da çocuğunuzun fotoğrafını başkası mı yükledi? Aynı adrese yazın; bizde tutulan kopyaları sileriz.</p>
+<p>Live Moment: Weather Wallpaper, Yunus Emre Sarı (Sancaktepe/İstanbul, Türkiye) tarafından sunulur. E-posta: <a href="mailto:1yesari1@gmail.com">1yesari1@gmail.com</a>. Aynı iletişim bilgileri <a href="../kvkk/#iletisim">KVKK Aydınlatma Metni</a> sayfasının 12. bölümünde de yer alır.</p>
+
+</div>
+
+</article>
+</main>
+
+<footer>
+  <p><span data-lang="en">Live Moment: Weather Wallpaper &middot; Last updated 30 September 2026</span><span data-lang="tr" hidden>Live Moment: Weather Wallpaper &middot; Son güncelleme 30 Eylül 2026</span></p>
+  <nav class="footer-links" aria-label="Legal pages">
+    <a href="../privacy/">Privacy</a>
+    <a href="../terms/">Terms</a>
+    <a href="../acceptable-use/">Acceptable use</a>
+    <a href="../kvkk/" lang="tr">KVKK</a>
+    <a href="../delete-data/">Delete data</a>
+    <a href="https://account.yesastudio.com/">Delete account</a>
+  </nav>
+</footer>
+<script>
+(function () {
+  var titles = { en: document.title, tr: "Verilerinizi silin · Live Moment" };
+  var blocks = document.querySelectorAll("[data-lang]");
+  var buttons = document.querySelectorAll("[data-language]");
+  function setLanguage(language) {
+    document.documentElement.lang = language;
+    document.title = titles[language];
+    blocks.forEach(function (block) {
+      block.hidden = block.getAttribute("data-lang") !== language;
+    });
+    buttons.forEach(function (button) {
+      var active = button.getAttribute("data-language") === language;
+      button.classList.toggle("is-active", active);
+      button.setAttribute("aria-pressed", String(active));
+    });
+  }
+  buttons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      setLanguage(button.getAttribute("data-language"));
+    });
+  });
+})();
+</script>
+</body>
+</html>

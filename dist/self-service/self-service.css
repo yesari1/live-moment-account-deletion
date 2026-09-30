@@ -1,0 +1,301 @@
+/*
+  Self-service on the account site: the Google sign-in card, the cloud-library list of the
+  Delete data page and the account deletion of the Delete account page. Loaded after
+  ../styles.css (and legal.css on the legal pages), so the colour tokens are the site's.
+  Every rule starts with .ss so that it also wins over the .legal article styles.
+*/
+
+.ss {
+  margin: 4px 0 36px;
+}
+
+.request-intro .ss {
+  margin: 30px 0 0;
+}
+
+.ss .ss-card {
+  padding: clamp(20px, 4vw, 28px);
+  background: rgba(15, 25, 40, 0.88);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.24);
+}
+
+.ss .ss-card.ss-danger {
+  background: var(--danger-soft);
+  border-color: rgba(255, 95, 95, 0.3);
+  box-shadow: none;
+}
+
+.ss .ss-title {
+  margin: 0 0 10px;
+  color: var(--accent);
+  font-size: clamp(1.15rem, 2.4vw, 1.4rem);
+  font-weight: 700;
+  line-height: 1.28;
+  letter-spacing: -0.025em;
+}
+
+.ss .ss-danger .ss-title {
+  color: #ffd0d0;
+}
+
+.ss .ss-title:focus-visible {
+  outline: 3px solid rgba(111, 181, 255, 0.42);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.ss .ss-text {
+  margin: 0 0 16px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.ss .ss-hint {
+  margin: 12px 0 0;
+  color: var(--text-tertiary);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.ss .ss-loading,
+.ss .ss-empty {
+  margin: 14px 0;
+  color: var(--text-secondary);
+}
+
+.ss .ss-status {
+  margin: 12px 0;
+  padding: 11px 13px;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  border-radius: 11px;
+}
+
+.ss .ss-status:empty {
+  display: none;
+}
+
+.ss .ss-status.is-ok {
+  color: var(--text);
+  background: var(--accent-soft);
+  border: 1px solid var(--border-strong);
+}
+
+.ss .ss-status.is-error {
+  color: #ffd0d0;
+  background: var(--danger-soft);
+  border: 1px solid rgba(255, 95, 95, 0.35);
+}
+
+.ss .ss-google {
+  gap: 12px;
+}
+
+.ss .ss-google svg {
+  width: 20px;
+  height: 20px;
+  padding: 2px;
+  box-sizing: content-box;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.ss .ss-account-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 22px;
+  padding: 12px 16px;
+  background: rgba(15, 25, 40, 0.7);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+}
+
+.ss .ss-account-bar p {
+  min-width: 0;
+  margin: 0;
+  color: var(--text-secondary);
+  overflow-wrap: anywhere;
+}
+
+.ss .ss-account-bar strong {
+  color: var(--text);
+}
+
+.ss .ss-button {
+  min-height: 44px;
+  padding: 9px 16px;
+  color: var(--text);
+  font-weight: 700;
+  background: rgba(15, 25, 40, 0.7);
+  border: 1px solid var(--border-strong);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: border-color 160ms ease, background 160ms ease;
+}
+
+.ss .ss-button:hover:not(:disabled) {
+  border-color: var(--accent-strong);
+}
+
+.ss .ss-button:focus-visible {
+  outline: 3px solid rgba(111, 181, 255, 0.42);
+  outline-offset: 3px;
+}
+
+.ss .ss-button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.ss .ss-button-danger {
+  color: #ffd0d0;
+  background: var(--danger-soft);
+  border-color: rgba(255, 95, 95, 0.4);
+}
+
+.ss .ss-button-danger:hover:not(:disabled) {
+  border-color: var(--danger);
+}
+
+.ss .ss-button-solid-danger {
+  color: #fff;
+  background: #c9434b;
+  border-color: transparent;
+}
+
+.ss .ss-button-solid-danger:hover:not(:disabled) {
+  background: #da4a53;
+  border-color: transparent;
+}
+
+.ss .ss-retry {
+  margin: 12px 0;
+}
+
+.ss .ss-list {
+  display: grid;
+  gap: 12px;
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ss .ss-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  margin: 0;
+  padding: 14px;
+  background: rgba(15, 25, 40, 0.7);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+}
+
+.ss .ss-item-done {
+  background: var(--accent-soft);
+  border-color: var(--border-strong);
+}
+
+.ss .ss-thumb {
+  display: grid;
+  flex: 0 0 auto;
+  width: 72px;
+  aspect-ratio: 9 / 16;
+  overflow: hidden;
+  background: var(--surface-elevated);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.ss .ss-thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ss .ss-body {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.ss .ss-item-title,
+.ss .ss-done-title {
+  margin: 2px 0;
+  color: var(--text);
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.ss .ss-meta {
+  margin: 0 0 12px;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.ss .ss-confirm p {
+  margin: 0 0 8px;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.ss .ss-confirm strong {
+  color: var(--text);
+}
+
+.ss .ss-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.ss .ss-note {
+  margin: 18px 0 0;
+  padding: 12px 15px;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  background: rgba(15, 25, 40, 0.6);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+}
+
+.ss .ss-danger label {
+  display: block;
+  margin: 18px 0 8px;
+  color: var(--text);
+  font-size: 0.94rem;
+  font-weight: 700;
+}
+
+.ss .ss-danger input[type="text"] {
+  max-width: 360px;
+}
+
+.ss .ss-danger .ss-button {
+  margin-top: 6px;
+}
+
+@media (max-width: 560px) {
+  .ss .ss-item {
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .ss .ss-thumb {
+    width: 56px;
+  }
+
+  .ss .ss-actions .ss-button {
+    flex: 1 1 130px;
+  }
+}

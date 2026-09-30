@@ -1,0 +1,271 @@
+/*
+  Live Moment legal pages: privacy policy, terms of use, acceptable use policy,
+  the Turkish KVKK notice and the delete-data page.
+
+  Loaded after styles.css, so the colour tokens, background, header, brand mark,
+  top navigation bar (.site-nav) and footer are the ones the account deletion page
+  already uses. No external requests, no cookies, and no scripts except the small
+  inline EN/TR switch on the delete-data page (its header uses .language-switch
+  from styles.css).
+*/
+
+.legal a:focus-visible,
+.footer-links a:focus-visible {
+  outline: 3px solid rgba(111, 181, 255, 0.42);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.legal {
+  max-width: 780px;
+  margin-inline: auto;
+  padding: 44px 0 96px;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.72;
+  overflow-wrap: break-word;
+}
+
+.legal.legal-wide {
+  max-width: 880px;
+}
+
+.legal h1 {
+  max-width: none;
+  margin: 0 0 10px;
+  color: var(--text);
+  font-size: clamp(2.1rem, 5.4vw, 3.1rem);
+  font-weight: 760;
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+}
+
+.legal h2 {
+  margin: 48px 0 12px;
+  color: var(--accent);
+  font-size: clamp(1.25rem, 2.4vw, 1.5rem);
+  line-height: 1.28;
+  letter-spacing: -0.025em;
+  scroll-margin-top: 16px;
+}
+
+.legal h3 {
+  margin: 26px 0 6px;
+  color: var(--text);
+  font-size: 1.05rem;
+}
+
+.legal p {
+  margin: 0 0 14px;
+}
+
+.legal ul,
+.legal ol {
+  margin: 0 0 18px;
+  padding-left: 22px;
+}
+
+.legal li {
+  margin: 0 0 7px;
+}
+
+.legal li::marker {
+  color: var(--accent-strong);
+}
+
+.legal strong {
+  color: var(--text);
+  font-weight: 650;
+}
+
+.legal a {
+  color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.legal a:hover {
+  color: #d6eaff;
+}
+
+.legal code {
+  padding: 1px 6px;
+  color: var(--text);
+  font-size: 0.92em;
+  background: var(--surface-elevated);
+  border-radius: 6px;
+}
+
+.legal .meta {
+  margin: 0 0 26px;
+  color: var(--text-tertiary);
+  font-size: 0.9rem;
+}
+
+.legal .callout {
+  margin: 0 0 8px;
+  padding: 20px 22px 8px;
+  background: linear-gradient(145deg, rgba(25, 43, 66, 0.72), rgba(15, 25, 40, 0.72));
+  border: 1px solid var(--border-strong);
+  border-radius: 20px;
+}
+
+.legal .callout h2 {
+  margin: 0 0 10px;
+  font-size: 1.1rem;
+}
+
+.legal .callout + .callout {
+  margin-top: 16px;
+}
+
+.legal .callout p,
+.legal .callout ul,
+.legal .callout ol {
+  color: var(--text);
+}
+
+.legal .lettered {
+  padding-left: 0;
+  list-style: none;
+}
+
+.legal .lettered li {
+  display: flex;
+  gap: 0.6em;
+}
+
+.legal .lettered li strong {
+  flex: 0 0 1.5em;
+  color: var(--accent-strong);
+}
+
+/* Tables: stacked cards on phones, real tables from 700px. */
+.legal .table-wrap {
+  margin: 0 0 22px;
+}
+
+.legal table {
+  width: 100%;
+  font-size: 0.92rem;
+  border-collapse: collapse;
+}
+
+.legal thead {
+  display: none;
+}
+
+.legal tbody tr {
+  display: block;
+  margin: 0 0 10px;
+  padding: 10px 14px;
+  background: rgba(15, 25, 40, 0.7);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+}
+
+.legal td,
+.legal th {
+  display: block;
+  padding: 4px 0;
+  text-align: left;
+  vertical-align: top;
+}
+
+.legal td::before {
+  display: block;
+  color: var(--text-tertiary);
+  font-size: 0.72rem;
+  font-weight: 750;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  content: attr(data-label);
+}
+
+.legal td:first-child {
+  color: var(--text);
+  font-weight: 650;
+}
+
+@media (min-width: 700px) {
+  .legal thead {
+    display: table-header-group;
+  }
+
+  .legal tbody tr {
+    display: table-row;
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: 0;
+    border-radius: 0;
+  }
+
+  .legal th,
+  .legal td {
+    display: table-cell;
+    padding: 11px 12px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .legal td:first-child {
+    min-width: 7.5rem;
+  }
+
+  .legal th {
+    color: var(--text-tertiary);
+    font-size: 0.72rem;
+    font-weight: 750;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .legal td::before {
+    display: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .legal {
+    padding: 32px 0 72px;
+  }
+
+  .legal h2 {
+    margin-top: 40px;
+  }
+}
+
+@media print {
+  body {
+    color: #000;
+    background: #fff;
+  }
+
+  body::before,
+  .site-nav,
+  .footer-links,
+  .skip-link {
+    display: none;
+  }
+
+  .legal,
+  .legal p,
+  .legal ul,
+  .legal ol,
+  .legal td,
+  .legal th,
+  .legal strong,
+  .legal h1,
+  .legal h2,
+  .legal h3,
+  .legal a {
+    color: #000;
+  }
+
+  .legal .callout,
+  .legal tbody tr {
+    background: none;
+    border-color: #999;
+  }
+}
