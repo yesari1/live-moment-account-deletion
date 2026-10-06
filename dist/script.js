@@ -25,7 +25,7 @@
       deletedTitle: "Silinenler",
       deletedSummary: "Live Moment hesabınız, profiliniz, yüklenen medyalarınız ve üretim geçmişiniz.",
       retainedTitle: "Kalabilecek veriler",
-      retainedSummary: "Dışa aktarılan kopyalar, Google hesabınız ve güvenlik ya da sağlayıcı saklama şartları için gerekli sınırlı kayıtlar.",
+      retainedSummary: "Dışa aktarılan kopyalar ve Google hesabınız. Kopyalarımızı talebinizden sonraki 30 gün içinde sileriz. Sunucu ve güvenlik kayıtları yaklaşık 30 güne kadar, silinen bulut dosyaları 7 gün daha, kullanım kayıtları bir yıla kadar, satın alma kayıtları vergi ve yasal kurallar gerektirdiği sürece saklanır. Yapay zekâ sağlayıcımız Pixazo’daki kopyalar onun kendi saklama kurallarına tabidir.",
       subscriptionTitle: "Hesabınızı silmek Google Play aboneliğinizi iptal etmez.",
       subscriptionText: "Etkin aboneliğinizi talep göndermeden önce veya sonra Google Play üzerinden ayrıca iptal edin.",
       footerText: "Hesap silme ve veri talebi",
